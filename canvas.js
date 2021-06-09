@@ -83,6 +83,7 @@ function Circle(x, y, dx, dy, radius) {
                     if (this.radius < 40){
                         this.radius += 1;
                     }
+                    
  }
                 else if(this.radius >2){
                     this.radius -= 1;
