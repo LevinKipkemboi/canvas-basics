@@ -34,6 +34,18 @@ c.stroke();
 } */
 //arc/cirle
 
+var mouse = {
+    x: undefined,
+    y: undefined
+}
+
+window.addEventListener('mousemove',
+    function(event){
+        mouse.x = event.x;
+        mouse.y = event.y;
+        console.log(event)
+    }
+)
 
 function Circle(x, y, dx, dy, radius) {
     this.x = x;
@@ -61,6 +73,11 @@ function Circle(x, y, dx, dy, radius) {
             }
             this.x += this.dx;
             this.y += this.dy;
+
+            //  interactivity
+            if (mouse.x - this.x <50){
+                this.radius += 1;
+            }
             this.draw();
     }
 }
