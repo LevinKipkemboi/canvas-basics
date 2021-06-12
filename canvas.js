@@ -38,6 +38,8 @@ var mouse = {
     x: undefined,
     y: undefined
 }
+var maxRadius = 40;
+var minRadius = 2;
 
 window.addEventListener('mousemove',
     function(event){
@@ -80,12 +82,12 @@ function Circle(x, y, dx, dy, radius) {
                 && mouse.y - this.y < 50 && 
                 mouse.y - this.y > -50
                 ){
-                    if (this.radius < 40){
+                    if (this.radius < maxRadius){
                         this.radius += 1;
                     }
-                    
+            
  }
-                else if(this.radius >2){
+                else if(this.radius > minRadius){
                     this.radius -= 1;
                
             }
