@@ -62,11 +62,12 @@ function Circle(x, y, dx, dy, radius) {
     this.dx = dx;
     this.dy = dy;
     this.radius = radius;
+    this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
 
     this.draw =function(){
         c.beginPath();
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        c.fillStyle = colorArray[Math.floor(Math.random() * colorArray.length)];
+        c.fillStyle = this.color;
         c.fill();
 
     }
