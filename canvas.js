@@ -115,7 +115,7 @@ function Circle(x, y, dx, dy, radius) {
 
 function init(){
    
-    for (var i = 0; i < 500; i++){
+    for (var i = 0; i < 5500; i++){
         var x =Math.random() *  (innerWidth - radius * 2) +radius;
         var y =Math.random() *  (innerHeight - radius * 2) +radius;
         var dx =(Math.random() -0.5)* 5;
